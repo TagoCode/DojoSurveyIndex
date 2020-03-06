@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        
+        <form action="/goto" method="post">
+        {% csrf_token %}
+
+        <td><label for="first_name">Name:</label></td>
+        <td><input type="text" id="first_name" name="first_name"></td><br>
+        
+        <td><label for="first_name">Dojo Location:</label></td>
+        <td><select name="location">
+            <option value="San Jose">San Jose</option>
+            <option value="Bellevue">Bellevue</option>
+        </select>
+        </td><br>
+    </tr>   
+    <tr>
+        <td><label for="last_name">Favorite Language:</label></td>
+        <td><select name="language">
+            <option value="Python">Python</option>
+            <option value="HTML">HTML</option>
+        </select>
+        </td>
+    </tr> <br>
+
+
+    <p> Comment (optional):</p>
+    <textarea name="description"></textarea>
+
+    <p><input type="submit" value="Submit"></p>
+    </form>
+
+
+    <!-- <form action="/goto" method="post">
+        {% csrf_token %}
+        <p>Field One: <input name="one" type="text"></p>
+        <p>Field Two: <input name="two" type="text"></p>
+        <button type="submit">Submit</button>
+      </form>
+       -->
+
+</body>
+</html>
